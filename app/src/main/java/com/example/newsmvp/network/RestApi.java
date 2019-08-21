@@ -9,5 +9,5 @@ import retrofit2.http.Query;
 public interface RestApi {
 
     @GET("everything")
-    Call<ArticlesGetRespond> getArticles(@Query("q") String articleTitle);
+    Call<ArticlesGetRespond> getArticles(@Query("q") String description);
 }
