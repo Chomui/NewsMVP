@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.example.newsmvp.adapter.ArticlesAdapter;
 import com.example.newsmvp.base.Injection;
@@ -56,7 +57,11 @@ public class SearchActivity extends AppCompatActivity implements OnArticleListen
 
     @Override
     public void updateUi(List<Article> list) {
-        adapter.submitList(list);
+        if (list.size() > 0) {
+            adapter.submitList(list);
+        } else {
+            Toast.makeText(this, "Нет статей по данному запросу", Toast.LENGTH_SHORT).show();
+        }
         this.list = list;
     }
 
