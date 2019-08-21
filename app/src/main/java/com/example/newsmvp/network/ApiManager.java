@@ -13,7 +13,7 @@ public class ApiManager implements RestApi{
     }
 
     @Override
-    public Call<ArticlesGetRespond> getArticles(String description) {
-        return api.getArticles(description);
+    public Call<ArticlesGetRespond> getArticles(String description, String apiKey) {
+        return api.getArticles(description, apiKey);
     }
 }

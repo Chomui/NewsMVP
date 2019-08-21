@@ -54,8 +54,7 @@ public class NetManager {
             Response.Builder builder;
 
             builder = response.newBuilder()
-                    .addHeader("Content-Type", "application/json; charset=utf-8")
-                    .addHeader("x-api-key", "96abefd87f9549a78631b0748889f856");
+                    .addHeader("Content-Type", "application/json; charset=utf-8");
             return builder.build();
         }
     }

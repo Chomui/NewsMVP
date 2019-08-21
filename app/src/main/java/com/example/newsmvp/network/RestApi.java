@@ -1,5 +1,6 @@
 package com.example.newsmvp.network;
 
+import com.example.newsmvp.BuildConfig;
 import com.example.newsmvp.pojo.ArticlesGetRespond;
 
 import retrofit2.Call;
@@ -9,5 +10,8 @@ import retrofit2.http.Query;
 public interface RestApi {
 
     @GET("everything")
-    Call<ArticlesGetRespond> getArticles(@Query("q") String description);
+    Call<ArticlesGetRespond> getArticles(
+            @Query("q") String description,
+            @Query("apiKey") String apiKey
+    );
 }
