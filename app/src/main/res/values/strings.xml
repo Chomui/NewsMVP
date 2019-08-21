@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NewsMVP</string>
+    <string name="search_hint">Article\'s name</string>
+</resources>
